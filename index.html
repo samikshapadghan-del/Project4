@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Traffic Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚦 AI Traffic Management</h1>
+    <p class="subtitle">Adaptive Signal Control – 4 Way Intersection</p>
+
+    <div class="main">
+
+        <!-- INTERSECTION -->
+        <div class="intersection">
+
+            <div class="road vertical"></div>
+            <div class="road horizontal"></div>
+
+            <!-- Direction Labels -->
+            <div class="label north">N</div>
+            <div class="label south">S</div>
+            <div class="label east">E</div>
+            <div class="label west">W</div>
+
+            <!-- Vehicles -->
+            <div class="laneVehicles northLane"></div>
+            <div class="laneVehicles southLane"></div>
+            <div class="laneVehicles eastLane"></div>
+            <div class="laneVehicles westLane"></div>
+
+        </div>
+
+        <!-- PANEL -->
+        <div class="panel">
+
+            <div class="lane" id="north">
+                <span>North</span>
+                <div class="bar"><div class="fill northColor"></div></div>
+                <span class="count">0</span>
+            </div>
+
+            <div class="lane" id="south">
+                <span>South</span>
+                <div class="bar"><div class="fill southColor"></div></div>
+                <span class="count">0</span>
+            </div>
+
+            <div class="lane" id="east">
+                <span>East</span>
+                <div class="bar"><div class="fill eastColor"></div></div>
+                <span class="count">0</span>
+            </div>
+
+            <div class="lane" id="west">
+                <span>West</span>
+                <div class="bar"><div class="fill westColor"></div></div>
+                <span class="count">0</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <div>🟢 Green Lane: <span id="greenLane">-</span></div>
+        <div>⭐ Least Traffic: <span id="bestLane">-</span></div>
+        <div>🚗 Total Vehicles: <span id="total">0</span></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
