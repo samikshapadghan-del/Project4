@@ -1502,7 +1502,7 @@ es.onmessage = (e) => {
 
 # ─── Entry point ──────────────────────────────────────────────────────────────
 def main():
-    PORT = int(os.environ.get("SMARTFLOW_PORT", "8000"))
+    PORT = int(os.environ.get("PORT", os.environ.get("SMARTFLOW_PORT", "8000")))
 
     # Start background training
     t_train = threading.Thread(target=training_thread, daemon=True)
